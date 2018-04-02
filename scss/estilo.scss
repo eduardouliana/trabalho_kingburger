@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Open+Sans+Condensed:300,700|Open+Sans:400,800');
+
+$clara: #ED7801;
+$escura: #762823;
+$branca: #FFFF;
+$preto: #000;
+
+$titulo: "Open Sans Condensed", "Open Sans", Tahoma;
+$texto: "Open Sans", Tahoma;
+
+body { font-family: "Open Sans", Arial, Tahoma; }
+
+p{
+    color: $clara;
+    font: 14px $texto;
+}
+
+h1{
+    color: $escura;
+    font: 36px $titulo;
+    text-shadow: 1px 1px 2px $preto;
+}
+
+h2{
+    color: $escura;
+    font: 24px $titulo;
+}
+
+nav{
+    padding: 10px 0px;
+
+    ul{
+        float: right;
+        margin-top: 30px 10px;
+        li{
+            display: inline;
+
+            a{
+                color: $clara;
+                text-decoration: none;
+                padding: 10px 20px;
+                font: 18px $titulo;
+                transition: all 0.5s;
+                font-weight: 700;
+
+                &:hover{
+                    background: $escura;
+                }
+            }
+        }
+        
+    }
+}
+
+header{
+    background: url(../images/header.jpg);
+    width: 100%;
+    height: 600px;
+    padding: 0px 10px;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.logo{
+    margin: 5px;
+    float: left;
+}
+
+.msg{
+    float: left;
+    width: 500px;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    margin: 50px;
+    box-shadow: 1px 1px 5px $preto;
+    border-radius: 5px;
+
+
+    p{
+        color: $branca;
+        font-weight: 200;
+        font-size: 1.5em;
+    }
+
+    h1{
+        color: $escura;
+        font-weight: 800;
+        font-size: 3em;
+        text-shadow: 1px 1px 2px $preto;
+        margin: 0;
+
+        &:after{
+            content: "";
+            border: 5px solid #ED7801;
+            width: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+
+    .btn{
+        background: #ED7801;
+        padding: 10px;
+        border-radius: 5px;
+        color: #fff;
+        transition: all 0.5s;
+        text-decoration: none;
+        font-size: 0.8em;
+    }
+}
+
+.max{
+    float: right;
+    margin: -50px 20px;
+}
+
+.clear{
+    clear: both;
+}
+
+.center{
+    text-align: center;
+}
+
+.titulo{
+    background: $escura;
+    color: $clara;
+    text-align: center;
+    padding: 20px 0px;
+
+    h1{
+        color: $clara;
+    }
+}
+
+.container{
+    width: 960px;
+    margin: auto;
+}
+
+.linha{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item{
+    flex: 1;
+    border: 1px solid #CCC;
+    margin: 5px;
+    text-align: center;
+    transition: all 0.5s;
+    border-radius: 5px;
+    padding: 20px;
+
+    &:hover{
+        border-color: $escura;
+    }
+
+    img{
+        width: 160px;
+    }
+
+    i{
+        font-size: 50px;
+        color: $clara;
+        margin: 20px;
+    }
+
+    p{
+        font-weight: 900;
+        margin: 10px 0;
+    }
+}
+
+#local{
+    background: url(../images/fogo.jpg) fixed;
+    padding: 40px 0px;
+    width:100%;
+    background-size: cover;
+
+    .item {
+        & i,
+        & p{
+        color: $branca;
+        }
+    }
+
+    h1{
+        text-align: center;
+        color: $clara;
+        font-weight: 800;
+
+        &:after{
+            content: "";
+            border: 5px solid $clara;
+            width: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+}
+
+#menu{
+    border: 1px solid $escura;
+    color: $escura;
+    padding: 10px;
+    float: right;
+    margin: 10px;
+    display: none;
+}
+
+@media(min-width: 480px) and (max-width: 800px){
+    nav ul {
+    width: 100%;
+    float: left;
+    background: $branca;
+    display: none;
+
+        li{
+            display: block;
+            a {
+                padding: 20px 0px;
+                font-size: 20px;
+                float: left;
+                width: 100%;
+            }
+        }
+    }
+    #menu{
+        display: block;
+    }
+    
+    .container{
+        width: 400px;
+    }
+
+    .msg{
+        width: 350px;
+        padding: 10px;
+    }
+
+    .max{
+        display: none;
+    }
+}
+
+.center img{
+    width: 350px;
+}
+
+.bacon{
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    height: 100px;
+    background: url(../images/bacon.jpg) bottom center no-repeat;
+    background-size: contain;
+
+}
+
+.promocoes {
+
+    width: 100%;
+    margin: 20px 0;
+    padding: 40px 0;
+    background: url(../images/bg.jpg) center no-repeat;
+
+    h1{
+        text-align: center;
+        font: 2em "Open Sans", Arial, Tahoma;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px $preto;
+        color: $clara;
+
+        &:after{
+            content: "";
+            border: 5px solid $clara;
+            width: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+
+    p{
+        font-size: 16px;
+        color: $preto;
+
+    }
+    
+}
+
+footer{
+    width: 100%;
+    background: #2D2D2D;
+    padding: 20px 0px;
+    color:$clara;
+
+    p{
+        font-size: 16px;
+        color: $branca;
+    }
+
+    .borda{
+        border-radius: 5px;
+        border: 1px solid $branca;
+        padding: 5px;
+        background: $branca;
+    }
+
+    .coluna{
+        flex: 1;
+        margin: 10px;
+    }
+
+    .row{ display: flex; }
+
+    h3 { 
+        color: $branca;
+        font-weight: 500px;
+    }
+
+
+    ul {
+        padding: 0px 10px;
+
+        li {
+            list-style: none;
+        
+            a{ 
+                color: $clara;
+        
+                &:hover{ color: $escura; }
+            }
+        }
+    }
+}
+
+#destaques{ margin: 20px 0px; }
+
+@media(max-width: 480px){
+
+}
+
+.cardapio {
+
+    width: 100%;
+    margin: 20px 0;
+    padding: 40px 0;
+
+    h1{
+        text-align: center;
+        font: 2em "Open Sans", Arial, Tahoma;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px $preto;
+        color: $clara;
+
+        &:after{
+            content: "";
+            border: 5px solid $clara;
+            width: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+    
+    p{
+        font-size: 16px;
+        color: #000;
+    }
+
+    .item{
+        width: 25%;
+        flex: auto;
+
+        &.big img{ margin-top: 48px; }
+    }
+
+    .valor { 
+        font-size: 14px;
+        font-weight: 100;
+    }
+
+    .msg-cardapio{
+        font-size: 26px;
+        font-weight: 700;
+    }
+}
+
+.sobre{
+    width: 100%;
+    margin: 20px 0;
+    padding: 40px 0;
+
+    h1{
+        text-align: center;
+        font: 2em "Open Sans", Arial, Tahoma;
+        font-weight: 900;
+        text-shadow: 1px 1px 2px $preto;
+        color: $clara;
+
+        &:after{
+            content: "";
+            border: 5px solid $clara;
+            width: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+    
+    p{
+        font-size: 16px;
+        color: #000;
+    }
+
+    .descricao{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+.burger{
+    width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    height: 150px;
+    background: url(../images/fundo.jpg) bottom center no-repeat;
+    background-size: auto;
+    opacity: 0.7;
+}
+
+.contato{
+    width: 100%;
+    margin: 20px 0;
+    padding: 40px 50px;
+
+    .itemForm, textarea{
+        margin: 20px;
+    }
+
+    input, select, textarea { border-radius: 0 !important;
+        border: 1px solid #CCC;
+        font-size: 14px;
+        padding: 5px; 
+        background-color: #FFF;
+        box-shadow: 0px 0px 3px #FFF inset, 0px 1px 1px rgba(0, 0, 0, 0.1);
+        margin: 5px 0;
+        
+    }
+
+    .buttonSubmit{
+        background: $clara;
+        border-radius: 0px;
+        color: #FFF;
+        font: 16px/26px "Open Sans", Arial, Tahoma;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1px 10px 0px;
+    }
+
+    .container{ margin: 20px; }
+
+    .formas-contato{
+
+        border: solid 1px #CCC;
+        padding: 20px;
+        margin-top: 40px;
+        border-radius: 2px;
+
+        &:hover{
+            border-color: $escura;
+        }
+
+        i{
+            font-weight: 900;
+            font-size: 18px;
+            padding: 8px 0px;
+            color: $clara;
+        }
+    }
+}
